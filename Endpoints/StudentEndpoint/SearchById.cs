@@ -11,6 +11,7 @@ namespace EndPointsAPI.Endpoints.StudentEndpoint
         [Route("SearchById")]
         public override ActionResult<Student> Handle(int request)
         {
+
             StudentContext myContext = new StudentContext();
             var data = myContext.Students.Find(request);
             if (data != null) 
